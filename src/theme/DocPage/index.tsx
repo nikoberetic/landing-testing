@@ -156,9 +156,10 @@ function DocPage(props: Props): JSX.Element {
             <Head>
                 {/* TODO we should add a core addRoute({htmlClassName}) generic plugin option */}
                 <html className={versionMetadata.className} />
-            </Head> <DocPageContent currentDocRoute={currentDocRoute} versionMetadata={versionMetadata}>
-            {renderRoutes(docRoutes, {versionMetadata})}
-        </DocPageContent>
+            </Head>
+            <DocPageContent currentDocRoute={currentDocRoute} versionMetadata={versionMetadata}>
+                {renderRoutes(docRoutes, {versionMetadata})}
+            </DocPageContent>
         </>
     );
 }

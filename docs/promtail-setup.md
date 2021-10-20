@@ -1,8 +1,10 @@
 # Promtail setup steps
- - based on https://sbcode.net/grafana/install-promtail-service/
-## Steps
+:::note
+Based on https://sbcode.net/grafana/install-promtail-service/
+:::
+# Steps
 
-0. Configure all lotus services to emit logs to appropriate location!
+Configure all lotus services to emit logs to appropriate location!
 ```bash
 Environment=GOLOG_FILE="/var/log/lotus/<service_name>.log"
 Environment=GOLOG_LOG_FMT="json"
@@ -17,7 +19,7 @@ sudo chmod a+x promtail
 ```
 
 ### 2. Add Promtail config
-```systemd
+```YAML
 # /usr/local/bin/config-promtail.yml
 
 server:
@@ -40,11 +42,14 @@ scrape_configs:
       job: lotuslogs
       __path__: /var/log/lotus/*log
 ```
-* change addserver with deployed loki infrastructure server
+:::note
+Change addserver with deployed loki infrastructure server
+:::
 
 ### 3. Register promtail as a service, while also adding promtail user (not necessary, just cleaner)
 ```systemd
 # /etc/systemd/system/promtail.service
+
 [Unit]
 Description=Promtail service
 After=network.target
