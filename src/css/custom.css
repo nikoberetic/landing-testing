@@ -470,7 +470,8 @@ body .theme-doc-toc-mobile {
         margin-left: auto;
     }
     .footer__links .col.footer__col:nth-child(4) {
-        width: 197px;
+        width: 200px;
+        flex: none;
     }
     body .navbar__item {
         margin-right: 0;
