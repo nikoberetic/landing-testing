@@ -1,0 +1,89 @@
+
+.listAdvantages {
+    padding-top: 12px;
+    list-style: none;
+    padding-left: 0;
+}
+.item {
+    display: inline-block;
+    padding: 12px 40px 12px 55px;
+    border-radius: 4px;
+    position: relative;
+    transition: all 200ms;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.item:last-of-type {
+    margin-bottom: 0;
+}
+html[data-theme='dark'] .item {
+    color: #C3C9FC;
+}
+html[data-theme='dark'] .item:hover,
+html[data-theme='dark'] .itemActive {
+    background: rgba(165, 175, 251, 0.08);
+    /*box-shadow: 0 24px 24px rgba(50, 50, 71, 0.1), 0 40px 48px rgba(50, 50, 71, 0.25);*/
+    color: #fff;
+}
+.item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    margin: auto;
+    width: 17px;
+    height: 17px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.itemImage {
+    position: absolute;
+    padding: 0 0 56.25% 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms;
+    height: 0;
+    width: 100%;
+}
+.itemImageActive {
+    opacity: 1;
+    visibility: visible;
+}
+.imgElem {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+html[data-theme='dark'] .item:before {
+    background-image: url("../../static/img/check.svg");
+}
+
+
+@media screen and (max-width: 767px) {
+    .rightImgWrapper {
+        min-height: 280px;
+        padding-top: 50px;
+    }
+}
+@media screen and (max-width: 485px) {
+    .rightImgWrapper {
+        min-height: 220px;
+        padding-top: 40px;
+    }
+}
+@media screen and (max-width: 485px) {
+    .rightImgWrapper {
+        min-height: 180px;
+        padding-top: 25px;
+    }
+}

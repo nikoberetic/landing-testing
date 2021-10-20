@@ -1,0 +1,106 @@
+.features {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+    position: relative;
+}
+.featureSvg {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.featureSvgHover {
+    display: none;
+}
+.box:hover .featureSvg {
+    display: none;
+}
+.box:hover .featureSvgHover {
+    display: block;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 32px;
+    position: relative;
+    border-radius: 4px;
+    transition: all 200ms;
+}
+html[data-theme='dark'] .box {
+    background: rgba(165, 175, 251, 0.08);
+}
+html[data-theme='dark'] .box:hover {
+    background-color: #5353FF;
+}
+.title {
+    color: #fff;
+    margin-bottom: 24px;
+}
+.description {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 300;
+    color: #D2D7FD;
+    margin-bottom: 30px;
+}
+.readMore {
+    margin-top: auto;
+    margin-right: auto;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: all 200ms;
+    font-size: 14px;
+    line-height: 17px;
+}
+html[data-theme='dark'] .readMore {
+    color: #5353FF;
+}
+html[data-theme='dark'] .box:hover .readMore {
+    color: #fff;
+    text-decoration: none;
+}
+.readMore:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid;
+    transition: all 200ms;
+}
+html[data-theme='dark'] .readMore:after {
+    border-bottom-color: #5353FF;
+}
+html[data-theme='dark'] .box:hover .readMore:after {
+    border-bottom-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .box:hover {
+        transform: translateY(-20px);
+    }
+}
+@media screen and (max-width: 767px) {
+
+    html[data-theme='dark'] .readMore:after {
+        border-bottom-color: #fff;
+    }
+    html[data-theme='dark'] .box {
+        background-color: #5353FF;
+    }
+    html[data-theme='dark'] .readMore {
+        color: #fff;
+        text-decoration: none;
+    }
+    .box .featureSvg {
+        display: none;
+    }
+    .box .featureSvgHover {
+        display: block;
+    }
+}
