@@ -15,7 +15,7 @@
 .featureSvgHover {
     display: none;
 }
-body .box:hover .featureSvg {
+.box:hover .featureSvg {
     display: none;
 }
 body .box:hover .featureSvgHover {
