@@ -18,7 +18,11 @@ function HomepageHeader() {
                         <h1 className="hero__title pb-2 mb-4">{siteConfig.title}</h1>
                         <p className="hero__subtitle pb-4 mb-5">{siteConfig.tagline}</p>
                         <div className={styles.buttons}>
-                            <Link className="btn btn-purple" to="/docs/doc1">{/*Docusaurus Tutorial - 5min ⏱️*/} Get started </Link>
+                            <Link className="btn btn-purple" to="/docs/doc1">
+                                {/*Docusaurus Tutorial - 5min ⏱️*/}
+                                <div className="anim" />
+                                <span>Get started </span>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -46,7 +50,10 @@ export default function Home() {
                             <div className="colored-block">
                                 <h2 className="color-1 pb-3 mb-4">Didn’t found what you were looking for?</h2>
                                 <p className="subheading pb-4 mb-4">Our team is constantly working to improve the resources and enable you to mine FileCoin seamlessly. We always anticipate constructive feedback and would be more than happy to extend the documentation with what you might suggest.</p>
-                                <Link className="btn btn-white" to="/docs/doc1"> Get started </Link>
+                                <Link className="btn btn-white" to="/docs/doc1">
+                                    <div className="anim" />
+                                    <span>Get started</span>
+                                </Link>
                             </div>
                         </div>
                     </div>

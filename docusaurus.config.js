@@ -108,7 +108,7 @@ const config = {
                             },
                             {
                                 label: 'Mining optimization',
-                                href: 'https://github.com/filmineio/',
+                                href: '/blog/welcome',
                             },
                         ],
                     },
