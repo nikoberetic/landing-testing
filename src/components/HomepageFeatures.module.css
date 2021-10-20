@@ -15,10 +15,10 @@
 .featureSvgHover {
     display: none;
 }
-.box:hover .featureSvg {
+body .box:hover .featureSvg {
     display: none;
 }
-.box:hover .featureSvgHover {
+body .box:hover .featureSvgHover {
     display: block;
 }
 .box {

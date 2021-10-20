@@ -24,10 +24,10 @@
 }
 
 html[data-theme='dark'] {
-    --ifm-background-color: #000;
-    --ifm-color-scheme: #000;
-    --ifm-hero-background-color: #000;
-    --ifm-navbar-background-color: #000;
+    --ifm-background-color: #151719;
+    --ifm-color-scheme: #151719;
+    --ifm-hero-background-color: #151719;
+    --ifm-navbar-background-color: #151719;
     --ifm-color-heading-1: #fff;
     --ifm-color-heading-2: #E1E4FE;
     --ifm-color-btn-1: #fff;
@@ -37,7 +37,7 @@ html[data-theme='dark'] {
     --ifm-color-white: #fff;
     --ifm-color-purple: #5353FF;
 
-    --ifm-footer-background-color: #000 !important;
+    --ifm-footer-background-color: #151719 !important;
 }
 .docusaurus-highlight-code-line {
     background-color: rgba(0, 0, 0, 0.1);
@@ -223,7 +223,7 @@ body .react-toggle--checked .react-toggle-thumb {
 
 
 html[data-theme='dark'] .footer--dark {
-    --ifm-footer-background-color: #000 !important;
+    --ifm-footer-background-color: #151719 !important;
 }
 .footer {
     padding-bottom: 70px;

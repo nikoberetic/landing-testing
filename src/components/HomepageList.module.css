@@ -25,6 +25,7 @@ html[data-theme='dark'] .itemActive {
     background: rgba(165, 175, 251, 0.08);
     /*box-shadow: 0 24px 24px rgba(50, 50, 71, 0.1), 0 40px 48px rgba(50, 50, 71, 0.25);*/
     color: #fff;
+    text-align: left;
 }
 .item:before {
     content: '';
@@ -49,7 +50,7 @@ html[data-theme='dark'] .itemActive {
     height: 0;
     width: 100%;
 }
-.itemImageActive {
+body .itemImageActive {
     opacity: 1;
     visibility: visible;
 }
