@@ -228,10 +228,15 @@ body .react-toggle--checked .react-toggle-thumb {
     -webkit-animation: anim-out 0.75s;
     animation: anim-out 0.75s;
 }
-.btn:hover > .anim:after {
-    -moz-animation: anim-out-pseudo 0.75s;
-    -webkit-animation: anim-out-pseudo 0.75s;
-    animation: anim-out-pseudo 0.75s;
+.btn-purple:hover > .anim:after {
+    -moz-animation: anim-out-pseudo2 0.75s;
+    -webkit-animation: anim-out-pseudo2 0.75s;
+    animation: anim-out-pseudo2 0.75s;
+}
+.btn-white:hover > .anim:after {
+    -moz-animation: anim-out-pseudo1 0.75s;
+    -webkit-animation: anim-out-pseudo1 0.75s;
+    animation: anim-out-pseudo1 0.75s;
 }
 
 @-webkit-keyframes anim-out {
@@ -250,20 +255,36 @@ body .react-toggle--checked .react-toggle-thumb {
     0% { width: 0; }
     100% { width: 100%; }
 }
-@-webkit-keyframes anim-out-pseudo {
-    0% { background: rgba(0, 0, 0, 0.25); }
+@-webkit-keyframes anim-out-pseudo1 {
+    0% { background: rgba(66, 66, 204, 0.4); }
     100% { background: transparent; }
 }
-@-moz-keyframes anim-out-pseudo {
-    0% { background: rgba(0, 0, 0, 0.25); }
+@-moz-keyframes anim-out-pseudo1 {
+    0% { background: rgba(66, 66, 204, 0.4); }
     100% { background: transparent; }
 }
-@-ms-keyframes anim-out-pseudo {
-    0% { background: rgba(0, 0, 0, 0.25); }
+@-ms-keyframes anim-out-pseudo1 {
+    0% { background: rgba(66, 66, 204, 0.4); }
     100% { background: transparent; }
 }
-@keyframes anim-out-pseudo {
-    0% { background: rgba(0, 0, 0, 0.25); }
+@keyframes anim-out-pseudo1 {
+    0% { background: rgba(66, 66, 204, 0.4); }
+    100% { background: transparent; }
+}
+@-webkit-keyframes anim-out-pseudo2 {
+    0% { background: rgba(66, 66, 204, 1); }
+    100% { background: transparent; }
+}
+@-moz-keyframes anim-out-pseudo2 {
+    0% { background: rgba(66, 66, 204, 1); }
+    100% { background: transparent; }
+}
+@-ms-keyframes anim-out-pseudo2 {
+    0% { background: rgba(66, 66, 204, 1); }
+    100% { background: transparent; }
+}
+@keyframes anim-out-pseudo2 {
+    0% { background: rgba(66, 66, 204, 1); }
     100% { background: transparent; }
 }
 
