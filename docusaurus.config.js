@@ -133,12 +133,15 @@ const config = {
                                     <div class="footer-social">
                                         <a href="https://twitter.com/wukoje" target="_blank">
                                             <img src="/img/icon-twitter.svg" alt="Twitter" />
+                                            <img src="/img/icon-twitter-white.svg" alt="Twitter" />
                                         </a>
                                         <a href="https://github.com/filmineio/" target="_blank">
                                             <img src="/img/icon-github.svg" alt="Github" />
+                                            <img src="/img/icon-github-white.svg" alt="Github" />
                                         </a>
                                         <a href="https://www.linkedin.com/in/vvkio/" target="_blank">
                                             <img src="/img/icon-linkedin.svg" alt="Linkedin" />
+                                            <img src="/img/icon-linkedin-white.svg" alt="Linkedin" />
                                         </a>
                                     </div>
                                   `,
