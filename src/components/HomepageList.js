@@ -8,11 +8,11 @@ import useBaseUrl from "@docusaurus/core/lib/client/exports/useBaseUrl";
 const List = [
     {
         title: 'Resource utilization',
-        img: 'temp1.svg'
+        img: 'undraw_docusaurus_mountain.svg'
     },
     {
         title: 'Sealing performance',
-        img: 'undraw_docusaurus_mountain.svg'
+        img: 'temp1.svg'
     },
     {
         title: 'Mining efficiency',

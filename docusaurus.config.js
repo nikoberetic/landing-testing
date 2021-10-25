@@ -1,6 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -45,13 +46,15 @@ const config = {
             metadatas: [{name: 'twitter:card', author: 'Alt Labs'}],
             colorMode: {
                 defaultMode: 'dark',
-                disableSwitch: true,
+                // disableSwitch: true,
             },
             navbar: {
                 logo: {
                     alt: 'My Site Logo',
-                    src: 'img/logo.svg',
+                    src: 'img/logo-dark.svg',
+                    srcDark: 'img/logo.svg',
                 },
+
                 items: [
                     {
                         to: '/',
@@ -85,9 +88,10 @@ const config = {
                         items: [
                             {
                                 html: `
-                                    <div>
+                                    <div class="footer-logo">
                                         <a href="/">
-                                            <img src="/img/logo.svg" alt="Home" />
+                                            <img src="/img/logo.svg" alt="Logo" />
+                                            <img src="/img/logo-dark.svg" alt="Logo" />
                                         </a>
                                     </div>
                                     <p class="copyright">© 2021 Filmine.</p>
@@ -132,16 +136,13 @@ const config = {
                                 html: `
                                     <div class="footer-social">
                                         <a href="https://twitter.com/wukoje" target="_blank">
-                                            <img src="/img/icon-twitter.svg" alt="Twitter" />
-                                            <img src="/img/icon-twitter-white.svg" alt="Twitter" />
+                                            <img src="/img/icon-twitter-core.svg" alt="Twitter" />
                                         </a>
                                         <a href="https://github.com/filmineio/" target="_blank">
-                                            <img src="/img/icon-github.svg" alt="Github" />
-                                            <img src="/img/icon-github-white.svg" alt="Github" />
+                                            <img src="/img/icon-github-core.svg" alt="Github" />
                                         </a>
                                         <a href="https://www.linkedin.com/in/vvkio/" target="_blank">
-                                            <img src="/img/icon-linkedin.svg" alt="Linkedin" />
-                                            <img src="/img/icon-linkedin-white.svg" alt="Linkedin" />
+                                            <img src="/img/icon-linkedin-core.svg" alt="Linkedin" />
                                         </a>
                                     </div>
                                   `,

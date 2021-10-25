@@ -20,11 +20,21 @@
 html[data-theme='dark'] .item {
     color: #C3C9FC;
 }
+html[data-theme='light'] .item {
+    color: #5353FF;
+}
 html[data-theme='dark'] .item:hover,
 html[data-theme='dark'] .itemActive {
     background: rgba(165, 175, 251, 0.08);
     /*box-shadow: 0 24px 24px rgba(50, 50, 71, 0.1), 0 40px 48px rgba(50, 50, 71, 0.25);*/
     color: #fff;
+    text-align: left;
+}
+html[data-theme='light'] .item:hover,
+html[data-theme='light'] .itemActive {
+    background: #F0F2FE;
+    box-shadow: 0 20px 48px rgba(50, 50, 71, 0.16);
+    color: #5353FF;
     text-align: left;
 }
 .item:before {
@@ -65,7 +75,7 @@ body .itemImageActive {
     width: 100%;
     object-fit: contain;
 }
-html[data-theme='dark'] .item:before {
+.item:before {
     background-image: url("../../static/img/check.svg");
 }
 

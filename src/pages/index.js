@@ -48,7 +48,7 @@ export default function Home() {
                     <div className="row py-5">
                         <div className="col-12 pb-md-5">
                             <div className="colored-block">
-                                <h2 className="color-1 pb-3 mb-4">Didn’t found what you were looking for?</h2>
+                                <h2 className="color-2 pb-3 mb-4">Didn’t found what you were looking for?</h2>
                                 <p className="subheading pb-4 mb-4">Our team is constantly working to improve the resources and enable you to mine FileCoin seamlessly. We always anticipate constructive feedback and would be more than happy to extend the documentation with what you might suggest.</p>
                                 <Link className="btn btn-white" to="/docs/doc1">
                                     <div className="anim" />
