@@ -150,7 +150,6 @@ function DocPage(props: Props): JSX.Element {
     if (!currentDocRoute) {
         return <NotFound {...props} />;
     }
-    // @ts-ignore
     return (
         <>
             <Head>
