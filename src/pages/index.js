@@ -52,7 +52,7 @@ export default function Home() {
                                 <p className="subheading pb-4 mb-4">Our team is constantly working to improve the resources and enable you to mine FileCoin seamlessly. We always anticipate constructive feedback and would be more than happy to extend the documentation with what you might suggest.</p>
                                 <Link className="btn btn-white" to="/docs/doc1">
                                     <div className="anim" />
-                                    <span>Get started</span>
+                                    <span>Report an issue</span>
                                 </Link>
                             </div>
                         </div>

@@ -37,6 +37,7 @@
 html[data-theme='dark'] {
     --ifm-background-color: #151719;
     --ifm-color-scheme: #151719;
+    --ifm-toc-link-color: #C3C9FC;
     --ifm-hero-background-color: #151719;
     --ifm-navbar-background-color: #151719;
     --ifm-color-heading-1: #fff;
@@ -54,6 +55,11 @@ html[data-theme='dark'] {
 }
 
 html[data-theme='light'] {
+    --ifm-font-color-base: #4d4d4d;
+    --ifm-heading-color: #151719;
+    --ifm-navbar-link-color: #151719;
+    --ifm-color-content: #151719;
+    --ifm-toc-link-color: #8794F9;
     --ifm-background-color: #fff;
     --ifm-color-scheme: #fff;
     --ifm-hero-background-color: #fff;
@@ -163,7 +169,7 @@ body .navbar__item {
     margin-left: 15px;
 }
 body .navbar__items--right .remove-icon svg {
-    /*display: none;*/
+    display: none;
 }
 body .navbar__link,
 body .navbar-sidebar .menu__link {
@@ -405,12 +411,12 @@ html[data-theme='light'] .copyright {
     display: inline-block;
     line-height: 17px;
 }
-html[data-theme='dark'] .footer__link-item {
-    color: #C3C9FC;
-}
-html[data-theme='dark'] .footer__link-item:hover {
-    color: #fff;
-}
+/*html[data-theme='dark'] .footer__link-item {*/
+/*    color: #C3C9FC;*/
+/*}*/
+/*html[data-theme='dark'] .footer__link-item:hover {*/
+/*    color: #fff;*/
+/*}*/
 html[data-theme='light'] .footer__link-item {
     color: #8794F9;
 }
@@ -510,8 +516,7 @@ body .left-sidebar-style {
 }
 .navbar-sidebar__back {
     top: 0;
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
     width: 100%;
 }
 .left-sidebar-style nav {
@@ -549,11 +554,18 @@ html body .left-sidebar-style nav > .theme-doc-sidebar-menu.menu__list > li a.me
 }
 .navbar-sidebar__items .menu__link--sublist:after,
 .left-sidebar-style nav > .theme-doc-sidebar-menu.menu__list > li a.menu__link--sublist:after {
-    background-image: url("../../static/img/arrow-right.svg");
     background-repeat: no-repeat;
     transform: none;
     filter: none;
     background-size: 16px;
+}
+html[data-theme='dark'] .navbar-sidebar__items .menu__link--sublist:after,
+html[data-theme='dark'] .left-sidebar-style nav > .theme-doc-sidebar-menu.menu__list > li a.menu__link--sublist:after {
+    background-image: url("../../static/img/arrow-right.svg");
+}
+html[data-theme='light'] .navbar-sidebar__items .menu__link--sublist:after,
+html[data-theme='light'] .left-sidebar-style nav > .theme-doc-sidebar-menu.menu__list > li a.menu__link--sublist:after {
+    background-image: url("../../static/img/arrow-right-dark.svg");
 }
 .navbar-sidebar__item > .theme-doc-sidebar-menu.menu__list li:not(.menu__list-item--collapsed) > a.menu__link--sublist:after,
 .left-sidebar-style nav > .theme-doc-sidebar-menu.menu__list li:not(.menu__list-item--collapsed) > a.menu__link--sublist:after {
@@ -573,11 +585,8 @@ html[data-theme='light'] .left-sidebar-style nav > .theme-doc-sidebar-menu.menu_
     border-left: 1px solid;
     padding-left: 10px;
 }
-html[data-theme='dark'] .left-sidebar-style nav > .theme-doc-sidebar-menu.menu__list > li > a.menu__link--sublist ~ .menu__list {
+.left-sidebar-style nav > .theme-doc-sidebar-menu.menu__list > li > a.menu__link--sublist ~ .menu__list {
     border-left-color: rgba(165, 175, 251, 0.24);
-}
-html[data-theme='light'] .left-sidebar-style nav > .theme-doc-sidebar-menu.menu__list > li > a.menu__link--sublist ~ .menu__list {
-    border-left-color: rgba(21, 23, 25, 0.24);
 }
 /** Left sidebar END **/
 
@@ -618,6 +627,13 @@ html[data-theme='light'] .left-sidebar-style nav > .theme-doc-sidebar-menu.menu_
     font-size: 14px;
     line-height: 17px;
 }
+.mdx-container .markdown .prism-code {
+    background: rgba(165, 175, 251, 0.16) !important;
+    border-radius: 2px;
+}
+.docusaurus-highlight-code-line {
+    background: rgba(165, 175, 251, 0.32) !important;
+}
 .mdx-container blockquote {
     border-left-width: 1px;
     margin-bottom: 25px;
@@ -657,7 +673,7 @@ html[data-theme='dark'] .pagination-nav__label {
     color: #fff;
 }
 html[data-theme='light'] .pagination-nav__label {
-    color: #5353FF;
+    color: #151719;
 }
 body .theme-doc-toc-mobile {
     /*padding: 10px;*/
@@ -847,6 +863,14 @@ body .theme-doc-toc-mobile {
     }
     .colored-block {
         padding: 40px;
+    }
+    .navbar > .container,
+    .navbar > .container-fluid {
+        padding: 0;
+    }
+    .container--short {
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }
 @media screen and (max-width: 425px) {
