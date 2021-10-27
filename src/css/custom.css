@@ -858,6 +858,7 @@ body .theme-doc-toc-mobile {
     }
 }
 @media screen and (max-width: 575px) {
+    
     .navbar-sidebar {
         width: calc(100% - 32px);
     }
