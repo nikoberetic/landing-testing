@@ -8,23 +8,23 @@ import useBaseUrl from "@docusaurus/core/lib/client/exports/useBaseUrl";
 const List = [
     {
         title: 'Resource utilization',
-        img: 'undraw_docusaurus_mountain.svg'
+        img: 'resource_utilization.svg'
     },
     {
         title: 'Sealing performance',
-        img: 'temp1.svg'
+        img: 'sealing_performance.svg'
     },
     {
         title: 'Mining efficiency',
-        img: 'undraw_docusaurus_react.svg'
+        img: 'mining_efficiency.svg'
     },
     {
         title: 'Gas cost',
-        img: 'undraw_docusaurus_tree.svg'
+        img: 'gas_cost.svg'
     },
     {
         title: 'Always up to date',
-        img: 'temp1.svg'
+        img: 'up_to_date.svg'
     },
 ];
 
@@ -57,11 +57,11 @@ export default function HomepageList() {
 
     return (
         <div className="container container--short py-5">
-            <div className="row py-md-5">
+            <div className="row align-items-center py-md-5">
                 <div className="col-12 pb-1">
-                    <h2 className="color-1 pb-2 mb-4">Why should you choose Filmine?</h2>
+                    <h2 className="color-1 pb-2 mb-5">Why should you choose Filmine?</h2>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 col-lg-5">
                     <ul className={styles.listAdvantages}>
                         {List.map((props, idx) => (
                             <Item
@@ -74,8 +74,8 @@ export default function HomepageList() {
                         ))}
                     </ul>
                 </div>
-                <div className="col-md-6">
-                    <div className={clsx('position-relative', styles.rightImgWrapper)}>
+                <div className="col-md-6 col-lg-7 d-flex">
+                    <div className={clsx(styles.rightImgWrapper)}>
                         {List.map((props, idx) => (
                             <RelatedImg
                                 id={idx}

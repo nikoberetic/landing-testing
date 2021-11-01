@@ -8,7 +8,7 @@
 .codeBlockContainer {
   margin-bottom: var(--ifm-leading);
   border-radius: var(--ifm-global-radius);
-  box-shadow: var(--ifm-global-shadow-lw);
+  /*box-shadow: var(--ifm-global-shadow-lw);*/
   overflow: hidden;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .copyButton {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(32, 33, 42, 1);
   background-image: url("../../../static/img/copy.svg");
   background-repeat: no-repeat;
   background-position: 8px center;
@@ -46,6 +46,9 @@
   right: calc(var(--ifm-pre-padding) / 2);
   top: calc(var(--ifm-pre-padding) / 2);
   transition: opacity 200ms ease-in-out;
+}
+html[data-theme='light'] .copyButton {
+    background-color: #C3C9FC;
 }
 .showCopied {
     background-image: url("../../../static/img/check.svg");

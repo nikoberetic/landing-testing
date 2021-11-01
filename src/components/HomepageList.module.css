@@ -13,6 +13,8 @@
     margin-bottom: 8px;
     cursor: pointer;
     font-size: 16px;
+    min-width: 270px;
+    text-align: left;
 }
 .item:last-of-type {
     margin-bottom: 0;
@@ -28,14 +30,23 @@ html[data-theme='dark'] .itemActive {
     background: rgba(165, 175, 251, 0.08);
     /*box-shadow: 0 24px 24px rgba(50, 50, 71, 0.1), 0 40px 48px rgba(50, 50, 71, 0.25);*/
     color: #fff;
-    text-align: left;
 }
 html[data-theme='light'] .item:hover,
 html[data-theme='light'] .itemActive {
-    background: #F0F2FE;
-    box-shadow: 0 20px 48px rgba(50, 50, 71, 0.16);
+    background: #E1E4FE;
+    box-shadow: 0 20px 32px rgba(50, 50, 71, 0.16);
     color: #5353FF;
     text-align: left;
+}
+.rightImgWrapper {
+    position: relative;
+    background: rgba(165, 175, 251, 0.08);
+    border-radius: 4px;
+    display: flex;
+    flex: 1 1 auto;
+    height: 0;
+    overflow: hidden;
+    padding: 0 0 70%;
 }
 .item:before {
     content: '';
@@ -53,7 +64,7 @@ html[data-theme='light'] .itemActive {
 }
 .itemImage {
     position: absolute;
-    padding: 0 0 56.25% 0;
+    padding: 0 0 70% 0;
     opacity: 0;
     visibility: hidden;
     transition: all 200ms;
@@ -80,10 +91,16 @@ body .itemImageActive {
 }
 
 
+@media screen and (max-width: 991px) {
+    .rightImgWrapper,
+    .itemImage {
+        padding-bottom: 100%;
+    }
+}
 @media screen and (max-width: 767px) {
     .rightImgWrapper {
         min-height: 280px;
-        padding-top: 50px;
+        margin-top: 50px;
     }
 }
 @media screen and (max-width: 485px) {

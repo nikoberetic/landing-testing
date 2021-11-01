@@ -30,10 +30,13 @@ body .box:hover .featureSvgHover {
     border-radius: 4px;
     transition: all 200ms;
 }
-.box {
+html[data-theme='dark'] .box {
     background: rgba(165, 175, 251, 0.08);
 }
-.box:hover {
+html[data-theme='light'] .box {
+    background: #F0F2FE;
+}
+body .box:hover {
     background-color: #5353FF;
 }
 .title {
@@ -111,7 +114,7 @@ html[data-theme='light'] .box:hover .description {
     .readMore:after {
         border-bottom-color: #fff;
     }
-    .box {
+    body .box {
         background-color: #5353FF;
     }
     .readMore {
