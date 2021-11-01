@@ -106,7 +106,7 @@ html[data-theme='light'] .box:hover .description {
 }
 
 @media screen and (min-width: 768px) {
-    .box:hover {
+    body .box:hover {
         transform: translateY(-20px);
     }
 }
@@ -114,7 +114,8 @@ html[data-theme='light'] .box:hover .description {
     .readMore:after {
         border-bottom-color: #fff;
     }
-    body .box {
+    html[data-theme='dark'] .box,
+    html[data-theme='light'] .box {
         background-color: #5353FF;
     }
     .readMore {
