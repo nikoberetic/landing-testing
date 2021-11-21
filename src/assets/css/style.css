@@ -1,0 +1,292 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    color: #6E7191;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+* {
+    -webkit-overflow-scrolling: touch;
+}
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #0A0521;
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+.text-gray-dark {
+    color: #0A0521;
+}
+.text-purple {
+    color: #5050FD;
+}
+.text-gradient {
+    background-image: -webkit-gradient(linear,left top,right bottom,color-stop(0,#47F57C),color-stop(1,#38E4FF));
+    background-image: gradient(linear,left top,right bottom,color-stop(0,#47F57C),color-stop(1,#38E4FF));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.min-height-32 {
+    /*min-height: 32px;*/
+}
+
+
+
+
+.navbar-wrapper {
+    border: 1px solid #EFF0F7;
+}
+
+.btn {
+    padding: 9px 22px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    border: 2px solid;
+    border-radius: 1px;
+}
+.btn-purple {
+    background: #5050FD;
+    border-color: #5050FD;
+    color: #FCFCFC;
+}
+.btn-purple:hover {
+    color: #FCFCFC;
+}
+.btn-white {
+    background: #fff;
+    border-color: #5050FD;
+    color: #5050FD;
+}
+.btn-white:hover {
+    color: #5050FD;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Algolia UI elements **/
+
+.ais-Hits-list {
+    list-style: none;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.ais-Hits-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    word-break: break-all;
+}
+.ais-Hits-item {
+    width: 25%;
+    display: flex;
+}
+.ais-Pagination {
+    margin-top: 80px;
+}
+.ais-Pagination-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.ais-Pagination-item .ais-Pagination-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+}
+.ais-Pagination-item:last-child .ais-Pagination-link {
+    margin-right: 0;
+}
+.ais-Pagination-item--page .ais-Pagination-link {
+    width: 48px;
+    height: 48px;
+    background: #EFF0F7;
+    color: #0A0521;
+}
+.ais-Pagination-item--page.ais-Pagination-item--selected .ais-Pagination-link {
+    background: #CBCBFF;
+    color: #5050FD;
+}
+.ais-Pagination-item.ais-Pagination-item--firstPage .ais-Pagination-link,
+.ais-Pagination-item.ais-Pagination-item--previousPage .ais-Pagination-link,
+.ais-Pagination-item.ais-Pagination-item--nextPage .ais-Pagination-link,
+.ais-Pagination-item.ais-Pagination-item--lastPage .ais-Pagination-link {
+    width: 24px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    font-size: 0;
+}
+.ais-Pagination-item.ais-Pagination-item--firstPage .ais-Pagination-link {
+    background-image: url("../../../public/img/chevronLeft.svg");
+}
+.ais-Pagination-item.ais-Pagination-item--previousPage .ais-Pagination-link {
+    background-image: url("../../../public/img/arrow-left.svg");
+}
+.ais-Pagination-item.ais-Pagination-item--nextPage .ais-Pagination-link {
+    background-image: url("../../../public/img/arrow-right.svg");
+}
+.ais-Pagination-item.ais-Pagination-item--lastPage .ais-Pagination-link {
+    background-image: url("../../../public/img/chevronNext.svg");
+}
+.filter-button {
+    color: #A0A3BD;
+    padding: 10px 5px;
+    margin: 0 15px 10px 15px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    transition: all 200ms;
+}
+.filter-button:hover,
+.filter-button.active {
+    border-bottom-color: #0A0521;
+    color: #0A0521;
+}
+
+
+
+
+
+
+
+
+/** Start Profile page **/
+
+/*.miner-cover {*/
+/*    position: relative;*/
+/*    padding-top: 32%;*/
+/*}*/
+/*.miner-cover img {*/
+/*    position: absolute;*/
+/*    object-fit: cover;*/
+/*    object-position: center;*/
+/*}*/
+/*.miner-cover > div {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    position: absolute !important;*/
+/*    top: 0;*/
+/*}*/
+/*.miner-main-info {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-between;*/
+/*}*/
+/*.miner-main-info h4 {*/
+/*    font-size: 22px;*/
+/*}*/
+/*.miner-image {*/
+/*    display: inline-flex;*/
+/*    border-radius: 50%;*/
+/*    overflow: hidden;*/
+/*}*/
+/*.miner-image img {*/
+/*    width: 64px;*/
+/*    height: 64px;*/
+/*    object-fit: cover;*/
+/*}*/
+/*.border-divider {*/
+/*    border-bottom: 1px solid rgb(221, 221, 221);*/
+/*}*/
+/*.miner-logs table {*/
+/*    width: 100%;*/
+/*}*/
+/*.miner-logs th,*/
+/*.miner-logs td {*/
+/*    font-size: 15px;*/
+/*    line-height: 22px;*/
+/*    border: 1px solid #e5e5e5;*/
+/*    background: #fcfcfc;*/
+/*}*/
+/*.miner-logs th {*/
+/*    padding: 16px;*/
+/*}*/
+/*.miner-logs td {*/
+/*    padding: 12px 16px;*/
+/*}*/
+
+
+
+/** End Profile page **/
+
+
+
+
+
+
+
+
+
+@media (min-width: 1366px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1230px;
+    }
+}
+@media (max-width: 1199px) {
+    .ais-Hits-item {
+        width: 33.33%;
+    }
+}
+@media (max-width: 991px) {
+    .ais-Hits-item {
+        width: 50%;
+    }
+}
+@media (max-width: 575px) {
+    .ais-Hits-item {
+        width: 100%;
+    }
+}

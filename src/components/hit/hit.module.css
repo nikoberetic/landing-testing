@@ -1,0 +1,93 @@
+.hit {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.hitSingle {
+    background: #F7F7FC;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: 1 1 auto;
+    cursor: pointer;
+}
+.descWrapper {
+    padding: 0 20px 20px 20px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+.logoWrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    top: -20px;
+    position: relative;
+}
+.logoWrapper img {
+    object-fit: contain;
+}
+.growth {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+.growth.positive {
+    color: #47F57C;
+}
+.growth.negative {
+    color: #E61B00;
+}
+.minerID {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.25px;
+    color: #A0A3BD;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+.tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tags label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-size: 10px;
+    color: #fff;
+    letter-spacing: 0.25px;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+.green {
+    background: #47F57C;
+}
+.blue {
+    background: #38E4FF;
+}
+.more {
+    background: #D9DBE9;
+}

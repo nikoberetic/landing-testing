@@ -1,0 +1,1 @@
+jq -s '.'  *.json > combined.json
