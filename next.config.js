@@ -1,11 +1,13 @@
-const targets = ['@filecoin-shipyard/lotus-client-rpc',
-    '@filecoin-shipyard/lotus-client-provider-nodejs',
-    '@filecoin-shipyard/lotus-client-schema'];
-const withTM = require('next-transpile-modules')(targets);
-
-module.exports = withTM({
+module.exports = {
     reactStrictMode: true,
     images: {
-        domains: ['i.postimg.cc', 'cdn.pixabay.com', 'images.unsplash.com', '157.230.119.255'],
+        domains: ['i.postimg.cc', 'cdn.pixabay.com', 'images.unsplash.com'],
+    },
+    env: {
+        BASE_URL: process.env.BASE_URL,
+        ALGOLIA_APP_ID: 'E6YQUILULJ',
+        ALGOLIA_API_KEY: 'c2ac6e18abde19a94d2b2b51e1785108',
+        PROFILES_INDEX_NAME: 'filgram',
+        SHOULD_REINDEX: false
     }
-});
+}

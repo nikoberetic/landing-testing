@@ -1,14 +1,10 @@
 import Image from "next/image";
 import styles from './SlidingGallery.module.css';
 import {useEffect, useRef, useState} from "react";
-import leftArrow from '../../../../public/img/uim_angle-left.svg';
-import rightArrow from '../../../../public/img/uim_angle-right.svg';
+import leftArrow from '../../../public/img/uim_angle-left.svg';
+import rightArrow from '../../../public/img/uim_angle-right.svg';
 
 export default function SlidingGallery({images, verified}) {
-
-
-    // console.log('imagesimagesimages', images)
-
 
     const [id, setId] = useState(0);
     const [newId, setNewId] = useState(0);
@@ -43,7 +39,7 @@ export default function SlidingGallery({images, verified}) {
         <div className="position-relative">
             {/*<div className={'image-list ' + }>*/}
             {
-                verified && <div className={ styles.verified }>Verified profile</div>
+                verified && <div className={ styles.verified }>Filgram verified</div>
             }
             <div className={`${ styles.imageList} ${( animation ? styles.animating : '')}`}>
                 <Image src={images[id]} layout="fill" alt="" />

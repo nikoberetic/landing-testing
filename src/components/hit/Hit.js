@@ -5,35 +5,61 @@ import SlidingGallery from "../sliding-gallery/SlidingGallery";
 import {Highlight} from "react-instantsearch-dom";
 
 
+const images = [
+    {
+        "images": [
+            "https://i.postimg.cc/V6hZ5y8m/png-clipart-mining-industry-decal-computer-software-training-others-service-logo.png",
+            "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+            "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+        ]
+    }
+]
+const tags = [
+    {
+        "tags": [
+            "Green",
+            "ISO09908",
+            "ISO09908",
+            "ISO09908",
+            "ISO09908",
+        ]
+    }
+]
+
+
 
 export default function Hit({ hit }) {
 
     if (hit.hasOwnProperty('_tags')) {
-        console.log('aaaaaa', hit)
+        console.log(hit)
     }
 
     return (
         <div className={ styles.hit }>
+            {/*<p>{JSON.stringify(hit)}</p>*/}
+            {/*<div>*/}
+            {/*    <div className="hit-picture">*/}
+            {/*        <img src={`${hit.image}`} />*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className={ styles.hitSingle }>
                 <Link
                     as={`/sp/${hit.id}`}
                     href={`/sp/[slug]`}
                 >
                     <div className="d-flex flex-column flex-grow-1">
-                        {
-                            hit && hit['images'] && <SlidingGallery
-                                images={hit['images']}
-                                verified={hit.isVerified}
-                            />
-                        }
+                        <SlidingGallery
+                            images={images[0]['images']}
+                            verified={true}
+                        />
                         <div className={ styles.descWrapper }>
                             <div className={ styles.header }>
                                 <div className={ styles.logoWrapper}>
-                                    <Image src={ hit.minerLogo } width="40" height="40" alt="Logo" />
+                                    <Image src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" width="50" height="50" alt="Logo" />
                                 </div>
                                 <div className="text-right">
-                                    <h2 className="text-purple mt-2 mb-0">{ hit.capacityTB } PiB</h2>
-                                    {/*<label className={`${styles.growth} ${styles.positive}`}>+27.32%</label>*/}
+                                    <h2 className="text-purple mt-2 mb-0">200TiB</h2>
+                                    <label className={`${styles.growth} ${styles.positive}`}>+27.32%</label>
                                     {/*<label className={`${styles.growth} ${styles.negative}`}>+27.32%</label>*/}
                                 </div>
                             </div>
@@ -44,34 +70,20 @@ export default function Hit({ hit }) {
                             <div className={ styles.tags }>
                                 {
                                     hit.hasOwnProperty('_tags') ?
-                                        <>
-                                            {
-                                                hit['_tags'].slice(0, 2).map((props, idx) => (
-                                                    <label
-                                                        key={idx}
-                                                        className={ styles.more }
-                                                    >
-                                                        { props }
-                                                    </label>
-                                                ))
-                                            }
-                                            {
-                                                hit['_tags'].length > 2 ?
-                                                    <label
-                                                        className={ styles.more }
-                                                    >
-                                                        +{ hit['_tags'].length - 2 }
-                                                    </label>
-                                                    :
-                                                    null
-                                            }
-                                        </>
+                                        hit['_tags'].slice(0, 2).map((props, idx) => (
+                                            <label
+                                                key={idx}
+                                                className={ styles.more }
+                                            >
+                                                { props }
+                                            </label>
+                                        ))
                                     :
                                     ''
                                 }
-                                {/*<label className={ styles.green }>Green</label>*/}
-                                {/*<label className={ styles.blue }>ISO09908</label>*/}
-                                {/*<label className={ styles.more }>+4</label>*/}
+                                <label className={ styles.green }>Green</label>
+                                <label className={ styles.blue }>ISO09908</label>
+                                <label className={ styles.more }>+4</label>
                             </div>
                         </div>
                     </div>
