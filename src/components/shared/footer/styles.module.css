@@ -1,0 +1,11 @@
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid #EFF0F7;
+}
+.copyright {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.25px;
+    color: #A0A3BD;
+}

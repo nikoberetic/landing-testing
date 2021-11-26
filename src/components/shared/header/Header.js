@@ -6,7 +6,7 @@ import {useState} from "react";
 import logo from '../../../../public/img/logo.svg';
 import hamburger from '../../../../public/img/jam_menu.svg';
 
-export default function Header() {
+export default function Header({...props}) {
 
     const [menu, setMenu] = useState(false);
 
@@ -28,7 +28,10 @@ export default function Header() {
                             <button className="navbar-toggler ml-auto" type="button" onClick={toggleMenu}>
                                 <Image src={ hamburger } alt="" />
                             </button>
-                            <Navigation />
+                            <Navigation
+                                showVerification={props.showVerification}
+                                toggleModalVerify={props.toggleModalVerify}
+                            />
                             {/*<div className={"collapse navbar-collapse " + (menu ? 'show': null)}>*/}
                             {/*    <Navigation />*/}
                             {/*</div>*/}

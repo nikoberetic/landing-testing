@@ -71,11 +71,11 @@
 }
 .navigation.left {
     left: 10px;
-    background-image: url("../../../public/img/chevronLeft.svg");
+    background-image: url("../../../../public/img/chevronLeft.svg");
 }
 .navigation.right {
     right: 10px;
-    background-image: url("../../../public/img/chevronNext.svg");
+    background-image: url("../../../../public/img/chevronNext.svg");
 }
 .legend {
     position: absolute;

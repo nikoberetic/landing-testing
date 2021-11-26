@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {useState} from "react";
 
-import close from '../../../public/img/close.svg';
+import close from '../../../../public/img/close.svg';
 import styles from "./lightbox.module.css";
 
 export default function LightBox({...props}) {

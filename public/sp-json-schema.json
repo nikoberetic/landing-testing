@@ -1,52 +1,61 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "type": "object",
-    "properties": {
-      "id": {
-        "type": "string"
-      },
-      "region": {
-        "type": "string"
-      },
-      "name": {
-        "type": "string"
-      },
-      "location": {
-        "type": "string"
-      },
-      "legalEntity": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "VAT": {
-            "type": "string"
-          },
-          "GDPR": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "name",
-          "VAT",
-          "GDPR"
-        ]
-      },
-      "capacityTB": {
-        "type": "integer"
-      },
-      "datasetCategories": {
-        "type": "string"
-      }
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
     },
-    "required": [
-      "id",
-      "region",
-      "name",
-      "location",
-      "legalEntity",
-      "capacityTB",
-      "datasetCategories"
-    ]
-  }
+    "region": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "legalEntity": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "VAT": {
+          "type": "string"
+        },
+        "GDPR": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "VAT",
+        "GDPR"
+      ]
+    },
+    "about": {
+      "type": "string"
+    },
+    "capacityTB": {
+      "type": "integer"
+    },
+    "datasetCategories": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "region",
+    "name",
+    "location",
+    "legalEntity",
+    "about",
+    "capacityTB",
+    "datasetCategories"
+  ]
+}
